@@ -2,6 +2,12 @@
 
 ![Logo](https://s3.amazonaws.com/oodles-blogs/blog-images/8beaf2c4-fe6f-494c-b523-a963cc327043.jpeg)
 
+## Key concepts:
+
+- Web component
+- Shadow root
+- Module federation
+
 ## How to use:
 
 ### Start each micro frontend projects:
