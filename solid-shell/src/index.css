@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  @apply text-blue-700
+} 
+
+.inactive {
+    @apply hover:text-blue-700
+  } 

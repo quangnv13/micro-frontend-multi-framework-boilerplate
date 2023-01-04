@@ -1,0 +1,23 @@
+{
+  "name": "micro-fe-workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node concurrently.js",
+    "build": "node concurrently_build.js"
+  },
+  "keywords": [
+    "micro frontend",
+    "multi framework"
+  ],
+  "author": "quangnv13",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.0"
+  }
+}
