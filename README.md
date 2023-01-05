@@ -39,7 +39,7 @@ From root path you can run
 
 ### Assets:
 
-I'm setup a **Nodejs/Express** project at **./share/assets/app.js**. You need add your asset files of each project in specify folder
+I setup a **Nodejs/Express** project at **./share/assets/app.js**. You need add your asset files of each project in specify folder
 **Example: ./share/assets/images/solid-about**.
 
 **Why we can not use asset files directly from project?**
@@ -51,7 +51,7 @@ The shell project can not accessible to the asset files from micro frontend proj
 
 ### Frameworks supported & default projects:
 
-I have been config/setup default projects for each supported framework. You need follow config/setup from specify project folder.## Supported frameworks:
+I config/setup default projects for each supported framework. You need follow config/setup from specify project folder.## Supported frameworks:
 
 - [SolidJS](https://www.solidjs.com)
 - [ReactJS](https://www.reactjs.org)
@@ -67,6 +67,7 @@ I have been config/setup default projects for each supported framework. You need
 ## Features(future):
 
 - [Monorepo with pnpm](https://pnpm.io/workspaces)
+- [Shared package module federation](https://webpack.js.org/plugins/module-federation-plugin)
 
 ## Store management:
 
