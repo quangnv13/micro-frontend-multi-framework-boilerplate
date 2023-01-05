@@ -11,6 +11,7 @@ import { baseConfig } from './config';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['../styles.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit, OnDestroy {
