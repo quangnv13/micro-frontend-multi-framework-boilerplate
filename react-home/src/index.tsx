@@ -1,13 +1,15 @@
 import ReactDOM from "react-dom/client";
+import { debounceTime, tap } from "rxjs";
+import windowStore from "../../share/store/store";
 import App from "./App";
 import "./index.css";
-import windowStore from "../../share/store/store";
-import { debounceTime, delay, tap } from "rxjs";
 
 class Home extends HTMLElement {
   root: HTMLElement;
   counterSubscription = windowStore.createSubscription();
-  counterUpdater = { setValue: (value: number) => {} };
+  counterUpdater: { setValue: (value: number) => void } = {
+    setValue: (value: number) => {},
+  };
 
   constructor() {
     super();

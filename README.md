@@ -57,10 +57,10 @@ I config/setup default projects for each supported framework. You need follow co
 - [ReactJS](https://www.reactjs.org)
 - [Vuejs](https://www.vuejs.org)
 - [Angular](https://www.angular.io)
+- [Svelte](https://www.svelte.dev)
 
 ## Support frameworks(future):
 
-- [Svelte](https://www.svelte.dev)
 - [Lit](https://www.lit.dev)
 - [Nextjs](https://nextjs.org)
 

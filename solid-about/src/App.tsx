@@ -16,18 +16,18 @@ const App: Component = () => {
     <>
       <style>{styles}</style>
       <div class="w-screen flex items-center justify-center my-20 gap-10">
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://www.solidjs.com/" target="_blank">
           <img
             src={baseConfig.resolveImagePath("solid.png")}
             class="w-40 h-40 hover:rotate-180 transition-transform duration-1000"
-            alt="Vite logo"
+            alt="Solid logo"
           />
         </a>
-        <a href="https://vuejs.org/" target="_blank">
+        <a href="https://vitejs.dev/" target="_blank">
           <img
             src={baseConfig.resolveImagePath("vite.svg")}
             class="w-40 h-40 hover:rotate-180 transition-transform duration-1000"
-            alt="Vue logo"
+            alt="Vite logo"
           />
         </a>
       </div>

@@ -27,7 +27,7 @@ function App({
           <img
             src={baseConfig.resolveImagePath("react.svg")}
             className="w-40 h-40 hover:rotate-180 transition-transform duration-1000"
-            alt="Vue logo"
+            alt="React logo"
           />
         </a>
       </div>

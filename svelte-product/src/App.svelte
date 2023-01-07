@@ -1,47 +1,47 @@
 <script lang="ts">
-  import svelteLogo from "./assets/svelte.svg";
-  import Counter from "./lib/Counter.svelte";
+  import { tap } from "rxjs";
+  import { baseConfig } from "./config";
+  import windowStore from "../../share/store/store";
+  import { onDestroy, onMount } from "svelte";
+
+  let counter = 0;
+  const storeSubscription = windowStore.counter$
+    .pipe(tap((c) => (counter = c)))
+    .subscribe();
+
+  onDestroy(() => {
+    storeSubscription.unsubscribe();
+  });
 </script>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <svelte-product-ce />
-  </div>
-
-  <p>
-    Check out <a
-      href="https://github.com/sveltejs/kit#readme"
-      target="_blank"
-      rel="noreferrer">SvelteKit</a
-    >, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
-</main>
-
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
+<div class="w-screen flex items-center justify-center my-20 gap-10">
+  <a href="https://svelte.dev/" target="_blank" rel="noreferrer">
+    <img
+      src={baseConfig.resolveImagePath("svelte.svg")}
+      class="w-40 h-40 hover:rotate-180 transition-transform duration-1000"
+      alt="Svelte logo"
+    />
+  </a>
+  <a href="https://vitejs.dev/" target="_blank" rel="noreferrer">
+    <img
+      src={baseConfig.resolveImagePath("vite.svg")}
+      class="w-40 h-40 hover:rotate-180 transition-transform duration-1000"
+      alt="Vite logo"
+    />
+  </a>
+</div>
+<div class="w-screen mt-10 items-center flex justify-center gap-4">
+  <button
+    class="border-2 p-2 rounded-md hover:border-blue-800 transition"
+    on:click={() => windowStore.increaseCounter()}
+  >
+    Increase
+  </button>
+  <button
+    class="border-2 p-2 rounded-md hover:border-blue-800 transition"
+    on:click={() => windowStore.decreaseCounter()}
+  >
+    Decrease
+  </button>
+  <p>{counter}</p>
+</div>
