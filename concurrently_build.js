@@ -1,33 +1,34 @@
 const concurrently = require("concurrently");
 const path = require("path");
+const packageManager = process.env.PM || "npm";
 const { result } = concurrently([
   {
-    command: "pnpm build",
+    command: `${packageManager} install && ${packageManager} build`,
     name: "solid-shell",
     cwd: path.resolve(__dirname, "solid-shell"),
   },
   {
-    command: "pnpm build",
+    command: `${packageManager} install && ${packageManager} build`,
     name: "solid-about",
     cwd: path.resolve(__dirname, "solid-about"),
   },
   {
-    command: "pnpm build",
+    command: `${packageManager} install && ${packageManager} build`,
     name: "angular-contact",
     cwd: path.resolve(__dirname, "angular-contact"),
   },
   {
-    command: "pnpm build",
+    command: `${packageManager} install && ${packageManager} build`,
     name: "react-home",
     cwd: path.resolve(__dirname, "react-home"),
   },
   {
-    command: "pnpm build",
+    command: `${packageManager} install && ${packageManager} build`,
     name: "svelte-product",
     cwd: path.resolve(__dirname, "svelte-product"),
   },
   {
-    command: "pnpm build",
+    command: `${packageManager} install && ${packageManager} build`,
     name: "vue-cart",
     cwd: path.resolve(__dirname, "vue-cart"),
   },

@@ -1,38 +1,39 @@
 const concurrently = require("concurrently");
 const path = require("path");
+const packageManager = process.env.PM || "npm";
 const { result } = concurrently([
   {
-    command: "pnpm start",
+    command: `${packageManager} install && ${packageManager} start`,
     name: "assets-server",
     cwd: path.resolve(__dirname, "share/assets"),
   },
   {
-    command: "pnpm serve",
+    command: `${packageManager} install && ${packageManager} serve`,
     name: "solid-shell",
     cwd: path.resolve(__dirname, "solid-shell"),
   },
   {
-    command: "pnpm serve",
+    command: `${packageManager} install && ${packageManager} serve`,
     name: "solid-about",
     cwd: path.resolve(__dirname, "solid-about"),
   },
   {
-    command: "pnpm start",
+    command: `${packageManager} install && ${packageManager} start`,
     name: "angular-contact",
     cwd: path.resolve(__dirname, "angular-contact"),
   },
   {
-    command: "pnpm serve",
+    command: `${packageManager} install && ${packageManager} serve`,
     name: "react-home",
     cwd: path.resolve(__dirname, "react-home"),
   },
   {
-    command: "pnpm serve",
+    command: `${packageManager} install && ${packageManager} serve`,
     name: "svelte-product",
     cwd: path.resolve(__dirname, "svelte-product"),
   },
   {
-    command: "pnpm serve",
+    command: `${packageManager} install && ${packageManager} serve`,
     name: "vue-cart",
     cwd: path.resolve(__dirname, "vue-cart"),
   },
