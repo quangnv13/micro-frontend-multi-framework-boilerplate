@@ -1,4 +1,3 @@
-let packageManager = process.env.PM || "npm";
 const readline = require("readline").createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -6,19 +5,23 @@ const readline = require("readline").createInterface({
 
 const pms = ["npm", "pnpm", "yarn"];
 
-export const pmRead = (callback) => {
+const pmRead = (callback) => {
   readline.question(
     "What is package manager you using?\n npm \n pnpm \n yarn \n=>",
-    (name) => {
-      if (!pms.includes(name)) {
+    (pmName) => {
+      let packageManager = "npm";
+
+      if (!pms.includes(pmName)) {
         throw Error(
-          `Your package manager input is invalid. ${name} please check and try again!`
+          `Your package manager input is invalid. ${pmName} please check and try again!`
         );
       }
-      packageManager = name;
+      packageManager = pmName;
 
       readline.close();
-      callback();
+      callback(pmName);
     }
   );
 };
+
+module.exports = pmRead;

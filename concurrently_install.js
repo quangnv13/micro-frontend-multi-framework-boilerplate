@@ -1,7 +1,7 @@
 const concurrently = require("concurrently");
 const path = require("path");
-const { pmRead } = require("./pm");
-pmRead(() => {
+const pmRead = require("./pm");
+pmRead((packageManager) => {
   const { result } = concurrently([
     {
       command: `${packageManager} install`,
