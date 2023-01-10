@@ -1,8 +1,16 @@
-import App from "./App";
+import App from './App';
+import { render } from 'solid-js/web';
+class Home extends HTMLElement {
+  root: HTMLElement;
+  constructor() {
+    super();
+    this.root = document.createElement('div');
+    render(() => App, this.root);
+  }
 
-import { customElement, hot } from "solid-element";
-import "./index.css";
+  connectedCallback() {
+    this.appendChild(this.root);
+  }
+}
 
-customElement("solid-home-ce", {}, App);
-
-hot(module, "solid-home-ce");
+customElements.define('solid-home-ce', Home);

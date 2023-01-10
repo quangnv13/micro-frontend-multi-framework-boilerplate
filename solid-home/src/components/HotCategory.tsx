@@ -45,9 +45,9 @@ const hotCategories = [
 ];
 export default function HotCategory({}: Props) {
   return (
-    <div class="flex justify-between pb-4 pt-5 bg-white w-[1200px] mx-auto">
+    <div class="flex justify-between items-center pb-4 pt-5 bg-white w-[1200px] mx-auto">
       {hotCategories.map((hot) => (
-        <div class="w-[100px] hover:-translate-y-1 transition-transform cursor-pointer h-[81px] flex flex-col items-center justify-center">
+        <div class="w-[100px] hover:-translate-y-1 transition-transform cursor-pointer h-[81px] flex flex-col items-center justify-start">
           <img
             width={45}
             height={45}

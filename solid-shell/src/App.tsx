@@ -22,13 +22,21 @@ const SolidAbout = lazy(() => import("./web-components/solid-about"));
 const SolidHome = lazy(() => import("./web-components/solid-home"));
 
 const App: Component = () => {
+  const bgClass = `bg-[url(${baseConfig.resolveImagePath(
+    "background/home-bg.png"
+  )})] bg-no-repeat bg-contain bg`;
   return (
-    <div class="pt-[150px] bg-[#f5f5f5]">
-      <img
-        width="100%"
-        class="object-contain absolute top-[118px]"
-        src={baseConfig.resolveImagePath("background/home-bg.png")}
-      />
+    <div
+      class="pt-[150px]"
+      style={{
+        "background-image": `url(${baseConfig.resolveImagePath(
+          "background/home-bg.png"
+        )})`,
+        "background-repeat": "no-repeat",
+        "background-size": "contain",
+        "background-position-y": "122px",
+      }}
+    >
       <Header></Header>
       <div class="w-[1200px] mx-auto">
         <Routes>

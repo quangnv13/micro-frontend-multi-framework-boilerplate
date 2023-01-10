@@ -65,14 +65,14 @@ export default function HotEvent({}: Props) {
         <div class="flex flex-col gap-1 w-[1200px-780px]">
           <div>
             <img
-              width="398"
+              width="400"
               height="115"
               src={baseConfig.resolveImagePath("2.png")}
             ></img>
           </div>
           <div>
             <img
-              width="398"
+              width="400"
               height="115"
               src={baseConfig.resolveImagePath("3.jpg")}
             ></img>

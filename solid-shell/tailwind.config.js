@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.tsx"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundPosition: {
+        y: "background-position-y",
+        x: "background-position-x",
+      },
+    },
   },
   plugins: [],
 };
