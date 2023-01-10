@@ -1,2 +1,2 @@
-import { configuationBase } from "../../share/utils/functions";
-export const baseConfig = configuationBase("");
+import { configuationBase } from '../../share/utils/functions';
+export const baseConfig = configuationBase('solid-shell');

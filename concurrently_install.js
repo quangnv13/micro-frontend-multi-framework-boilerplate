@@ -15,6 +15,11 @@ pmRead((packageManager) => {
     },
     {
       command: `${packageManager} install`,
+      name: "solid-home",
+      cwd: path.resolve(__dirname, "solid-home"),
+    },
+    {
+      command: `${packageManager} install`,
       name: "solid-about",
       cwd: path.resolve(__dirname, "solid-about"),
     },
