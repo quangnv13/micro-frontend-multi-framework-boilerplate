@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node concurrently.js",
-    "build": "node concurrently_build.js",
-    "postinstall": "node concurrently_install.js"
+    "start": "node tasks/start.js",
+    "build": "node tasks/build.js",
+    "postinstall": "node task/install.js"
   },
   "keywords": [
     "micro frontend",
