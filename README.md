@@ -15,9 +15,7 @@
 Go to folder of each project you can run
 
 ```
-  pnpm install && pnpm start
-  yarn install && yarn start
-  npm install && npm start
+  npm start
 ```
 
 ### Start or build all micro frontend projects:
@@ -26,15 +24,11 @@ Project use [**concurrently**](https://www.npmjs.com/package/concurrently) to ru
 From root path you can run
 
 ```
-  pnpm install && pnpm start
-  yarn install && yarn start
-  npm install && npm start
+  npm start
 ```
 
 ```
-  pnpm install && pnpm build
-  yarn install && yarn build
-  npm install && npm build
+  npm build
 ```
 
 ### Assets:
@@ -68,6 +62,7 @@ I config/setup default projects for each supported framework. You need follow co
 
 - [Monorepo with pnpm](https://pnpm.io/workspaces)
 - [Shared package module federation](https://webpack.js.org/plugins/module-federation-plugin)
+- Generate project with built-in CLI
 
 ## Store management:
 

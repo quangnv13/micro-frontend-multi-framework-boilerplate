@@ -22,3 +22,8 @@ dist-ssr
 .angular
 
 *.Identifier
+
+#Package manager
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
