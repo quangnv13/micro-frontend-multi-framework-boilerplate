@@ -11,7 +11,7 @@ function createStartCommand(packageManager, name, pathName) {
 }
 
 runTask((packageManager) => {
-  logger.info(`*******Run with ${packageManager}********`);
+  logger.info(`******* Run script with ${packageManager} ********`);
 
   const commands = [
     {
