@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node tasks/start.js",
+    "serve": "node tasks/serve.js",
     "build": "node tasks/build.js"
   },
   "keywords": [

@@ -15,7 +15,9 @@
 Go to folder of each project you can run
 
 ```
-  npm start
+  pnpm install && pnpm start
+  yarn install && yarn start
+  npm install && npm start
 ```
 
 ### Start or build all micro frontend projects:
@@ -24,11 +26,15 @@ Project use [**concurrently**](https://www.npmjs.com/package/concurrently) to ru
 From root path you can run
 
 ```
-  npm start
+  pnpm serve
+  yarn serve
+  npm run serve
 ```
 
 ```
-  npm build
+  pnpm build
+  yarn build
+  npm run build
 ```
 
 ### Assets:
